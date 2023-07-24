@@ -1,26 +1,37 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Angular
+.angular
 
-# Compiled output
+# compiled output
 /dist
 /tmp
 /out-tsc
+# Only exists if Bazel was run
 /bazel-out
 
-# Node
+# dependencies
 /node_modules
-npm-debug.log
-yarn-error.log
+node_modules/
+package-lock.json
+# do not add yarn.lock here
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# Environment variables
+.env
 
 # IDEs and editors
-.idea/
+/.idea
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+/nbproject
 
-# Visual Studio Code
+# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,15 +39,26 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
+# misc
+/.sass-cache
 /connect.lock
 /coverage
 /libpeerconnection.log
+npm-debug.log
+yarn-error.log
 testem.log
 /typings
 
-# System files
+# System Files
 .DS_Store
 Thumbs.db
+/nbproject/private/
+
+# Playwright
+**/test-results/
+**/playwright-results/
+**/playwright-snapshots/
+**/tests/snapshots/
+**/playwright-report/
+**/playwright/.cache/
+storageState.json
