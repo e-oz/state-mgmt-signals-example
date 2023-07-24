@@ -1,0 +1,7 @@
+<items-list
+  [allItems]="store.$items()"
+  [page]="store.$page()"
+  [pageSize]="store.$pageSize()"
+  [disabled]="store.$loading()"
+  (pagination)="store.paginated($event)"
+/>

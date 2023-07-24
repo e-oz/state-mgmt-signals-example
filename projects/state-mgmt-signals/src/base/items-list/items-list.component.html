@@ -1,0 +1,28 @@
+<mat-accordion [multi]="false">
+  <mat-expansion-panel
+    *ngFor="let item of store.$items()"
+    [expanded]="item === store.$selectedItem()"
+    (afterExpand)="setSelected(item, true)"
+    (afterCollapse)="setSelected(item, false)"
+    [disabled]="disabled">
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{item.title}}</mat-panel-title>
+
+      <mat-panel-description *ngIf="displayDescriptions">
+        {{item.description}}
+      </mat-panel-description>
+
+      <mat-icon *ngIf="item === store.$selectedItem()">radio_button_checked</mat-icon>
+    </mat-expansion-panel-header>
+
+    <div class="item-body">{{item.body}}</div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-paginator [length]="store.$total()"
+               [pageSize]="store.$pageSize()"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page"
+               (page)="pagination.emit($event)"
+/>

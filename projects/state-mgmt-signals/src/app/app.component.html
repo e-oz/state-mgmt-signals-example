@@ -1,0 +1,28 @@
+<app-navbar/>
+
+<mat-tab-group [dynamicHeight]="true" [preserveContent]="true">
+  <mat-tab>
+    <ng-template matTabLabel>
+      <div class="tab">
+        <span>Planes</span>
+        <mat-icon *ngIf="store.$loadingPlanes()" class="spinner">restart_alt</mat-icon>
+      </div>
+    </ng-template>
+    <ng-template matTabContent>
+      <app-planes/>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template matTabLabel>
+      <div class="tab">
+        <span>Ships</span>
+        <mat-icon *ngIf="store.$loadingShips()" class="spinner">restart_alt</mat-icon>
+      </div>
+    </ng-template>
+
+    <ng-template matTabContent>
+      <app-ships/>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

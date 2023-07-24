@@ -30,7 +30,8 @@
               "projects/state-mgmt-signals/src/assets"
             ],
             "styles": [
-              "projects/state-mgmt-signals/src/styles.scss"
+              "projects/state-mgmt-signals/src/styles.scss",
+              "@angular/material/prebuilt-themes/deeppurple-amber.css"
             ],
             "scripts": []
           },
@@ -93,6 +94,7 @@
               "projects/state-mgmt-signals/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "projects/state-mgmt-signals/src/styles.scss"
             ],
             "scripts": []

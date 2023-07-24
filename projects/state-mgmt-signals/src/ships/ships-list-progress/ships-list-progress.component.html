@@ -1,0 +1,6 @@
+<list-progress
+  [page]="store.$page()"
+  [pageSize]="store.$pageSize()"
+  [total]="store.$items().length"
+  [disabled]="store.$loading()"
+/>
