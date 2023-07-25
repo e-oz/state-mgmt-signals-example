@@ -39,12 +39,6 @@ export class ItemsListComponent {
   @Output() pagination = new EventEmitter<PageEvent>();
 
   protected setSelected(item: Item, selected: boolean) {
-    if (selected) {
-      this.store.$selectedItem.set(item);
-    } else {
-      if (this.store.$selectedItem() === item) {
-        this.store.$selectedItem.set(undefined);
-      }
-    }
+    this.store.setSelected({ item, selected });
   }
 }
