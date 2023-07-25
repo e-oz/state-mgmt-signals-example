@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/state-mgmt-signals",
+            "outputPath": "docs",
             "index": "projects/state-mgmt-signals/src/index.html",
             "main": "projects/state-mgmt-signals/src/main.ts",
             "polyfills": [
