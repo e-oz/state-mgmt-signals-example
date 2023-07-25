@@ -1,11 +1,10 @@
 import { ChangeDetectionStrategy, Component, computed, Input, Signal, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 
 @Component({
   selector: 'list-progress',
   standalone: true,
-  imports: [CommonModule, MatProgressBarModule],
+  imports: [MatProgressBarModule],
   templateUrl: './list-progress.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

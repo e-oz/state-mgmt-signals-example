@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ShipsStore } from "./ships.store";
 import { MatCardModule } from "@angular/material/card";
 import { ShipsListComponent } from "./ships-list/ships-list.component";
@@ -10,7 +9,6 @@ import { ShipsListProgressComponent } from "./ships-list-progress/ships-list-pro
   selector: 'app-ships',
   standalone: true,
   imports: [
-    CommonModule,
     MatCardModule,
     ShipsListComponent,
     ShipsPageIndicatorComponent,
