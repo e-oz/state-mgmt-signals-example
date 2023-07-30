@@ -12,7 +12,7 @@ export class ListProgressComponent {
   protected readonly $total = signal<number>(0);
   protected readonly $page = signal<number>(0);
   protected readonly $pageSize = signal<number>(10);
-  protected readonly $progress: Signal<number> = computed(() => {
+  protected readonly $progress = computed<number>(() => {
     if (this.$pageSize() < 1 && this.$total() < 1) {
       return 0;
     }

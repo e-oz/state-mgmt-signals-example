@@ -11,13 +11,13 @@ export class ItemsListStore {
 
   public readonly $pageSize = signal<number>(10);
 
-  public readonly $items: Signal<Item[]> = computed(() => {
+  public readonly $items = computed<Item[]>(() => {
     const pageSize = this.$pageSize();
     const offset = this.$page() * pageSize;
     return this.$allItems().slice(offset, offset + pageSize);
   });
 
-  public readonly $total: Signal<number> = computed(() => this.$allItems().length);
+  public readonly $total = computed<number>(() => this.$allItems().length);
 
   public readonly $selectedItem = signal<Item | undefined>(undefined);
 

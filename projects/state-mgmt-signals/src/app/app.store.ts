@@ -17,7 +17,7 @@ export class AppStore {
   public readonly $ships = this.state.$ships.asReadonly();
   public readonly $loadingPlanes = this.state.$loadingPlanes.asReadonly();
   public readonly $loadingShips = this.state.$loadingShips.asReadonly();
-  public readonly $loading = computed(() => this.$loadingPlanes() || this.$loadingShips());
+  public readonly $loading = computed<boolean>(() => this.$loadingPlanes() || this.$loadingShips());
 
   constructor() {
     this.generateAll();
